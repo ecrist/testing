@@ -1,0 +1,11 @@
+language: bash
+
+os:
+     - linux
+
+sudo: false
+env:
+ - PATH=/usr/bin:/bin:./
+script:
+ - which shellcheck
+ - shellcheck -V
