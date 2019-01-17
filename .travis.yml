@@ -3,9 +3,17 @@ language: bash
 os:
      - linux
 
+addons:
+        apt:
+                packages:
+                        - xz
+                        - shellcheck
+
 sudo: false
 env:
      - PATH=/usr/bin:/bin:./:/usr/local/bin
+
+
 script:
  - which shellcheck
  - shellcheck -V
