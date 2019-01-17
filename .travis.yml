@@ -3,16 +3,12 @@ language: bash
 os:
      - linux
 
-addons:
-        apt:
-                packages:
-                        - xz
-                        - cabal
-
-sudo: false
 env:
      - PATH=/usr/bin:/bin:./:/usr/local/bin
 
+before_install:
+        - sudo apt-get install -y xz
+        - sudo apt-get install -y cabal
 
 script:
  - which shellcheck
