@@ -1,7 +1,8 @@
 language: bash
 
-os:
-     - linux
+os:   linux
+dist: trusty
+
 
 env:
      - PATH=/usr/bin:/bin:./:/usr/local/bin
@@ -11,6 +12,13 @@ before_install:
         - sudo apt-get install -y xz
         - sudo apt-get install -y cabal
 
+install:
+    - sudo apt-add-repository "deb http://archive.ubuntu.com/ubuntu xenial main universe"
+    - sudo apt-get update
+    - sudo apt-get install -y cabal
+    - sudo apt-get install -y shellcheck
+
 script:
  - which shellcheck
  - shellcheck -V
+
