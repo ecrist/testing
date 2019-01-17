@@ -7,7 +7,7 @@ addons:
         apt:
                 packages:
                         - xz
-                        - shellcheck
+                        - cabal
 
 sudo: false
 env:
